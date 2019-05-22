@@ -1,0 +1,237 @@
+body,h1,h2,h3,h4,h5,h6,form,list,div,p,ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+a{
+    color: #000000;
+    text-decoration: none;
+
+
+}
+.nav li a:hover{
+    color: aqua;
+}
+body{
+    color: #434343;
+    background-color: #e9eaed;
+    font-family: 微软雅黑，Sans_seri;
+    line-height: 1.5;
+
+
+}
+img{
+    width: 100%;
+    height: 100%;
+
+}
+/* head*/
+.head{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+.headBox{
+    height: 100%;
+    width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+.headBox h1{
+    height: 100%;
+    float: left;
+    font-size: 22px;
+    line-height: 60px;
+    margin-right: 80px;
+}
+.headBox .nav{
+    height: 100%;
+    font-size: 15px;
+    line-height: 50px;
+    background-color: black;
+    float: left;
+}
+.headBox .nav .first{
+    height: 100%;
+    width: 192px;
+    background: blue;
+    float: left;
+    display: inline;
+}
+.nav a{
+    margin-right: 58px;
+    color: white;
+    line-height: 60px;
+}
+.headBox .search > a > img{
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    float: right;
+}
+.headBox li{
+    height: 60px;
+    float: left;
+
+}
+.main{
+    width: 1200px;
+    height: 1200px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.title{
+    border-bottom: 1px solid #e4e3e3;
+    overflow: hidden;
+    height: 42px;
+    line-height: 42px;
+    position: relative;
+}
+.title::before{
+    content: '';
+    /*border-bottom: 2px solid #333333;*/
+    overflow: hidden;
+    height: 3px;
+    width: 60px;
+    display: block;
+    background-color: #333333;
+    position: relative;
+    bottom: -40px;
+
+}
+.title:hover::before{
+    width: 80px;
+}
+.main h2{
+    font-size: 15px;
+    color: #333333;
+    padding: 10px 0;
+}
+.main b{
+    font-size: 15px;
+    color:#333333;
+    line-height: 1.5;
+}
+.main  img {
+    width: 480px;
+    height: 50px;
+}
+.main .word{
+    width: 99%;
+    height: 200px;
+    border: 1px solid #333333;
+}
+.submit p{
+    width: 40px;
+    height: 30px;
+    padding: 0 20px;
+    line-height: 30px;
+    border-radius: 5px;
+    float: right;
+    background: #333333;
+    color: white;
+    margin-top: 10px;
+}
+.note2{
+    width: 100%;
+    height: 100px;
+    /*background-color: #999999;*/
+    margin-top: 50px;
+    padding-top: 25px;
+    position: relative;
+}
+.note .noteDraw img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    /*padding: 25px 0;*/
+    margin-right: 20px;
+}
+.note .user{
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.note .noteWord{
+    font-size: 15px;
+    color: #333333;
+}
+.note .time{
+    font-size: 12px;
+    color: #999999;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+.note .noteBottom{
+    width: 100%;
+    height: 40px;
+    padding: 20px 0;
+
+
+    border-top: 1px solid #999999;
+    border-bottom: 1px dashed #999999;
+
+
+}
+.note .no{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding-left: 10px;
+}
+.note .hot{
+    font-size: 15px;
+    color: #ff6600;
+}
+.no p{
+    display: inline-block;
+    float: left;
+    font-size: 15px;
+    color: #333333;
+    line-height: 40px;
+}
+.bottom{
+    margin-top: 10px;
+    background-color: #333333;
+    width: 100%;
+    height: 150px;
+    position: relative;
+
+}
+.bottom .top{
+    width: 100%;
+    height: 10px;
+    background-color: #12b7de;
+}
+.bottom  span{
+    display: inline-block;
+}
+.bottom  .pic{
+
+    width: 100px;
+    height: 100px;
+    margin: 30px 50px;
+}
+
+.bottom .word h2{
+    color: #4ebbfe;
+    font-size: 16px;
+    margin-bottom: 100px;
+    position: absolute;
+    top:40px;
+}
+.bottom .word p{
+    color: #73777a;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
+}

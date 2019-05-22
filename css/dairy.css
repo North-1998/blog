@@ -64,6 +64,12 @@ img{
     background-color: red;
     float: right;
 }
+.headBox .search > a > img{
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    float: right;
+}
 .headBox li{
     height: 60px;
     float: left;
@@ -73,18 +79,352 @@ img{
 .box{
     width: 1200px;
     min-height: 600px;
-    background: px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow: hidden;
+
 }
 .boxLeft{
     width: 900px;
     min-height: 600px;
     margin: 20px auto;
-    background-color: white;
+    /*background-color: white;*/
     float:left;
+
 }
+.leftTop{
+    width: 100%;
+    height: 140px;
+    background: white;
+    border-radius: 5px;
+}
+.leftTop .draw img{
+    display: inline-block;
+    width: 120px;
+    height: 100px;
+    padding: 20px;
+    float: left;
+}
+.leftTop .topWord{
+    display: inline-block;
+    width: 600px;
+    float: left;
+    margin: 20px 0;
+}
+.leftTop .topWord h2{
+   font-size: 22px;
+    margin-bottom: 15px;
+
+}
+.leftTop .topWord p{
+    color: #666;
+    font-size: 15px;
+}
+.title{
+    border-bottom: 1px solid #e4e3e3;
+    overflow: hidden;
+    height: 42px;
+    line-height: 42px;
+    position: relative;
+}
+.title::before{
+    content: '';
+    /*border-bottom: 2px solid #333333;*/
+    overflow: hidden;
+    height: 3px;
+    width: 60px;
+    display: block;
+    background-color: #333333;
+    position: relative;
+    bottom: -40px;
+
+}
+.title:hover::before{width: 80px;}
+.newEassy{
+    width: 860px;
+    background-color: white;
+    padding: 20px;
+    margin-top:40px;
+   border-radius: 5px;
+}
+.essay{
+    margin-top: 26px;
+    width: 820px;
+    height: 183px;
+    /*padding: 20px ;*/
+    position: relative;
+
+}
+.eassyL{
+    overflow: hidden;
+}
+.eassyT{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+}
+.essay b{
+    display: inline-block;
+    float: left;
+    color: red;
+}
+.essayT > a{
+    font-size: 18px;
+    font-weight: 900;
+    color: #000000;
+}
+.essayT {
+    font-size: 18px;
+    color: #333333;
+    display: inline-block;
+    float: left;
+    font-weight: 900;
+}
+.eassyT p{
+    color: #000000;
+}
+.eassyB{
+    width: 100%;
+    height: 124px;
+    /*background-color: #009966;*/
+    margin-top: 15px;
+}
+.eassyDraw{
+    width: 200px;
+    height: 124px;
+    background-color: #333333;
+    border-radius: 5px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+
+}
+.eassyDraw:hover img{
+    transform: scale(1.5,1.5);
+}
+.eassytText{
+    width: 600px;
+    font-size: 14px;
+    display: inline-block;
+    /*float:right;*/
+    padding-left: 20px;
+    /*margin-left: 20px;*/
+
+}
+.design{
+    display: inline-block;
+    color: #36d681;
+}
+.eassyRead{
+    width: 80px;
+    height: 20px;
+    background-color: #12b7de;
+    border-radius: 5px;
+    padding: 11px 8px;
+    float: right;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+}
+.time{
+    color: #999999;
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 20px;
+    float: left;
+}
+.design{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    color: #009966;
+    font-size: 15px;
+    margin: 35px;
+    display: inline-block;
+    float: left;
+}
+.eassyS{
+
+    margin-top: 20px;
+    border-bottom: 1px dashed #eeeeee;
+
+}
+
 .boxRight{
     width: 284px;
     min-height: 600px;
-    margin:20px;
+    margin:20px 0;
     float: right;
+    /*background: white;*/
+    border-radius: 5px;
+}
+.slide{
+    width: 244px;
+    padding: 20px;
+    background-color: white;
+    float: right;
+    border-radius: 5px;
+
+}
+.sildedarw{
+    padding-top: 20px;
+
+}
+.sildedarwL li{
+    font-size: 15px;
+    height: 30px;
+    margin-top: 10px;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+
+}
+
+.sildedarwL > li::before{
+    content:'1' ;
+    color: white;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    background-color: #ff6600;
+    text-align: center;
+    line-height: 16px;
+
+}
+.sildedarwL > li:nth-child(2)::before{
+    content: '2';
+}
+.sildedarwL > li:nth-child(3)::before{
+    content: '3';
+}
+.sildedarwL > li:nth-child(4)::before{
+    content: '4';
+    background-color: #b1b1b1;
+}
+.sildedarwL > li:nth-child(5)::before{
+    content: '5';
+    background-color: #b1b1b1;
+}
+.sildedarwL > li:nth-child(6)::before{
+    content: '6';
+    background-color: #b1b1b1;
+}
+.sildedarwL li{
+    height: 38px;
+    margin-top: 12px;
+    background-color: #e9eaed;
+    border-radius: 5px;
+    padding: 0px 22px 0px 38px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    line-height: 38px;
+
+}
+.recommendDarw{
+
+    margin-top: 10px;
+
+}
+.recommendDarwList_1{
+    width: 242px;
+    height: 60px;
+    /*background-color: #009966;*/
+    position: relative;
+}
+.recommendD{
+    width: 70px;
+    height: 60px;
+    float: left;
+    /*margin-top: 10px;*/
+}
+.recommendD a{
+    width: 70px;
+    height: 60px;
+    display: block;
+    float: left;
+}
+.recommendtext{
+    width: 167px;
+    height: 45px;
+    font-size: 14px;
+    overflow: hidden;
+    margin-top: 20px;
+    display:block;
+    margin-left: 10px;
+
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*left: 0px;*/
+}
+.recommendtext a {
+    display: block;
+    margin-left: 20px;
+}
+.like li{
+    height: 48px;
+    margin-top: 12px;
+    border-radius: 5px;
+    padding: 0px 22px 0px 38px;
+    position: relative;
+    overflow: hidden;
+}
+.like li::before{
+    content: '';
+    height: 3px;
+    width: 3px;
+    background-color: #333333;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+
+}
+.xinxi li{
+    margin-top: 10px;
+
+}
+.bottom{
+    margin-top: 10px;
+    background-color: #333333;
+    width: 100%;
+    height: 150px;
+    position: relative;
+
+
+}
+.bottom .top{
+    width: 100%;
+    height: 10px;
+    background-color: #12b7de;
+}
+.bottom  span{
+    display: inline-block;
+}
+.bottom  .pic{
+
+    width: 100px;
+    height: 100px;
+    margin: 30px 50px;
+}
+
+.bottom .word h2{
+    color: #4ebbfe;
+    font-size: 16px;
+    margin-bottom: 100px;
+    position: absolute;
+    top:40px;
+}
+.bottom .word p{
+    color: #73777a;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
