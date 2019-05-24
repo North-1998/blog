@@ -75,7 +75,6 @@ img{
     float: left;
 
 }
-/*boxLeft*/
 .box{
     width: 1200px;
     min-height: 600px;
@@ -88,37 +87,11 @@ img{
     width: 900px;
     min-height: 600px;
     margin: 20px auto;
-    /*background-color: white;*/
+    background-color: white;
     float:left;
-
-}
-.leftTop{
-    width: 100%;
-    height: 140px;
-    background: white;
-    border-radius: 5px;
-}
-.leftTop .draw img{
-    display: inline-block;
-    width: 120px;
-    height: 100px;
     padding: 20px;
-    float: left;
-}
-.leftTop .topWord{
-    display: inline-block;
-    width: 600px;
-    float: left;
-    margin: 20px 0;
-}
-.leftTop .topWord h2{
-   font-size: 22px;
-    margin-bottom: 15px;
+    box-sizing: border-box;
 
-}
-.leftTop .topWord p{
-    color: #666;
-    font-size: 15px;
 }
 .title{
     border-bottom: 1px solid #e4e3e3;
@@ -140,118 +113,9 @@ img{
 
 }
 .title:hover::before{width: 80px;}
-.newEassy{
-    width: 860px;
-    background-color: white;
-    padding: 20px;
-    margin-top:40px;
-   border-radius: 5px;
-}
-.essay{
-    margin-top: 26px;
-    width: 820px;
-    height: 183px;
-    /*padding: 20px ;*/
-    position: relative;
-
-}
-.eassyL{
-    overflow: hidden;
-}
-.eassyT{
+.boxL .img{
     width: 100%;
-    height: 20px;
-    background-color: white;
-}
-.essay b{
-    display: inline-block;
-    float: left;
-    color: red;
-}
-.essayT > a{
-    font-size: 18px;
-    font-weight: 900;
-    color: #000000;
-}
-.essayT {
-    font-size: 18px;
-    color: #333333;
-    display: inline-block;
-    float: left;
-    font-weight: 900;
-}
-.eassyT p{
-    color: #000000;
-}
-.eassyB{
-    width: 100%;
-    height: 124px;
-    /*background-color: #009966;*/
-    margin-top: 15px;
-}
-.eassyDraw{
-    width: 200px;
-    height: 124px;
-    background-color: #333333;
-    border-radius: 5px;
-    display: inline-block;
-    float: left;
-    overflow: hidden;
-
-}
-.eassyDraw:hover img{
-    transform: scale(1.5,1.5);
-}
-.eassytText{
-    width: 600px;
-    font-size: 14px;
-    display: inline-block;
-    /*float:right;*/
-    padding-left: 20px;
-    /*margin-left: 20px;*/
-
-}
-.design{
-    display: inline-block;
-    color: #36d681;
-}
-.eassyRead{
-    width: 80px;
-    height: 20px;
-    background-color: #12b7de;
-    border-radius: 5px;
-    padding: 11px 8px;
-    float: right;
-    text-align: center;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-
-}
-.time{
-    color: #999999;
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 35px;
-    margin-left: 20px;
-    float: left;
-}
-.design{
-    display: inline-block;
-    width: 100px;
-    height: 20px;
-    color: #009966;
-    font-size: 15px;
-    margin: 35px;
-    display: inline-block;
-    float: left;
-}
-.eassyS{
-
-    margin-top: 20px;
-    border-bottom: 1px dashed #eeeeee;
-
+    height: auto;
 }
 
 .boxRight{

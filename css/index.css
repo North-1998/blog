@@ -317,24 +317,72 @@ img{
 .tab .tabList{
     height: 220px;
     width: 565px;
-    /*padding: 20px;*/
     float: right;
-    /*background-color: #e9eaed;*/
     border-radius: 5px;
 }
 .tabList > li{
     width: 566px;
     height: 90px;
+
     background-color: #e9eaed;
 
 }
-.tabList > span{
-    font-size: 16px;
-    color: #9a9a9a;
-    display: inline-block;
-    float: left;
+.tabList  .hot{
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 32px;
 }
-.tabList > p{
+.tabList  h2{
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+    display: block;
+   padding-left: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 32px;
+    position: relative;
+
+}
+.tabList li h2::before{
+    content:'1' ;
+    color: white;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    background-color: #ff6600;
+    text-align: center;
+    line-height: 16px;
+
+}
+.tabList li h2:first-child(2)::before{
+    content: '1';
+    background-color: #ff6600;
+}
+.tabList h2:nth-child(2)::before{
+    content: '2';
+}
+.tabList h2:nth-child(3)::before{
+    content: '3';
+}
+.tabList h2:nth-child(4)::before{
+    content: '4';
+    background-color: #b1b1b1;
+}
+.tabList h2:nth-child(5)::before{
+    content: '5';
+    background-color: #b1b1b1;
+}
+
+.tabList  p{
     font-size: 14px;
     color: #434343;
     line-height: 1.5;
@@ -343,6 +391,7 @@ img{
     height: 48px;
     -webkit-line-clamp:2;
     overflow: hidden;
+    padding: 0 10px;
 
 }
 
@@ -588,7 +637,8 @@ img{
 }
 .essayT > a{
     font-size: 18px;
-    font-weight: 900;
+    /*font-weight: 900;*/
+    font-weight: bold;
 }
 .essayT {
     font-size: 18px;
