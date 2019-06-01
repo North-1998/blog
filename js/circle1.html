@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .center{
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom:0;
+            margin:auto;
+        }
+        .circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all ease 0.5s;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="center"></div>
+<script>
+    let center =document.querySelector(".center")
+    let r =100;
+    let n =24;
+    let num =10*n;
+    let ang =2/n*Math.PI;
+    heart(num, n ,r);
+     function  heart(num, n ,r) {
+         let times=5;
+         for (let i = 0; i < num; i++) {
+             if (i%n == 0 && i!=0){
+             r+=30;
+             times+=50;
+         }
+             let rad = ang * i;
+             let lefts = r * Math.cos(rad);
+             let tops = r * Math.sin(rad);
+             let circle = document.createElement("div");
+             circle.classList.add("circle");
+             center.appendChild(circle)
+             let t =
+                 (function(times){
+                     setTimeout(function () {
+                         circle.style.transitionDelay = times + `ms`;
+                         circle.style.top = tops + `px`;
+                         circle.style.left = lefts + `px`;
+                         circle.style.opacity = 1;
+                         // clearTimeout(t);
+                     }, 10)
+                 })(times)
+
+
+     }
+     }
+</script>
+
+</body>
+</html>

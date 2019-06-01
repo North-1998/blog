@@ -92,12 +92,18 @@ img{
     float: left;
     position: relative;
 }
+/*.darwList{*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 .darw li{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
+    opacity:0;
+    transition:opacity 2s;
 }
 .darw li a{
     width: 100%;
@@ -111,13 +117,15 @@ img{
     background-color: #009966;
     margin-top: -16px;
     position: absolute;
-
+    z-index: 999;
 }
 .LeftBnt{
     left: 50px;
+
 }
 .rightBnt{
     right: 50px;
+    z-index: 999;
 }
 .bntList{
     width: 96px;
@@ -126,7 +134,9 @@ img{
     position: relative;
     margin-top: 224px;
     margin-left: 262px;
+    z-index: 999;
     /*margin-left: auto ;*/
+
 
 }
 .bntList  span{
@@ -136,6 +146,7 @@ img{
     border-radius: 50%;
     margin-right: 10px;
     background-color: white;
+    z-index: 999;
 }
 
 .banner .film{
@@ -161,19 +172,10 @@ img{
 
 
  }
-/*.banner .film .information_2{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    color: white;*/
-/*    font-size: 15px;*/
-/*    margin-bottom: 10px;*/
-/*    display: block;*/
-/*    position: relative;*/
-/*    transition: transform .2s linear;*/
 
 
 
-/*}*/
+
 .banner .film a{
     height: 125px;
     width: 100%;
@@ -252,7 +254,7 @@ img{
 }
  .messageList{
     border-bottom: 1px solid #e4e3e3;
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 42px;
     line-height: 42px;
 }
@@ -328,6 +330,9 @@ img{
 
 /*}*/
 .tabList  .hot{
+    height: 90px;
+    width: 568px;
+    background-color: #f7f7f7;
     font-size: 15px;
     color: #000000;
     font-weight: bold;
@@ -338,11 +343,11 @@ img{
     line-height: 32px;
 }
 .tabList li{
-    height: 38px;
+    height: 37px;
     /*margin-top: 12px;*/
     /*background-color: #e9eaed;*/
     border-radius: 5px;
-    /*padding: 0px 22px 0px 38px;*/
+    padding: 0px 22px 0px 38px;
     position: relative;
     /*white-space: nowrap;*/
     text-overflow:ellipsis;
@@ -403,7 +408,7 @@ img{
     line-height: 1.5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    height: 48px;
+    height: 42px;
     -webkit-line-clamp:2;
     overflow: hidden;
     padding: 0 10px;
@@ -516,13 +521,16 @@ img{
     border-right: 1px solid #eee;
     float: left;
     position: relative;
-    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0);
-    transition: all .5s ease;
+    /*box-shadow: 2px 2px 15px  rgba(7,17,27,0.2);*/
+    /*!*!*overflow: hidden;*!*!*/
+    /*transition: all .5s ease;*/
+
 
 }
 .recommendList li:hover{
-    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0);
-    background-color: white;
+    box-shadow: 2px 2px 15px  rgba(7,17,27,0.2);
+    transition: all .5s ease;
+    /*background-color: #046B80;*/
 }
 
 .recommendList .recommendThumb:nth-child(3)::before{
@@ -545,19 +553,19 @@ img{
     right: -1px;
 
 }
-.recommendList .recommendThumb:nth-child(6)::before{
-    content: '';
-    width: 1px;
-    height: 287px;
-    background-color: white;
-    display: block;
-    position:absolute;
-    right: 0px;
+/*.recommendList .recommendThumb:nth-child(6)::before{*/
+/*    content: '';*/
+/*    width: 1px;*/
+/*    height: 287px;*/
+/*    background-color: white;*/
+/*    display: block;*/
+/*    position:absolute;*/
+/*    right: 0px;*/
 
-}
+/*}*/
 .recommendList .recommendThumb:nth-last-child(4)~.recommendThumb::before{
     content: '';
-    width: 560px;
+    width: 840px;
     height: 1px;
     background-color: white;
     display: block;
