@@ -9,14 +9,6 @@ window.onload = function () {
     let messageList = document.getElementsByClassName("messageList")
     let messageL =messageList[0].getElementsByTagName("li")
 
-
-    // console.log(tabList);
-    // console.log(tabL);
-    // console.log(messageList);
-    // console.log(messageL);
-    // console.log(listli);
-    // console.log(bntList);
-    // console.log(bannerPointer);
     //博客
         hs.onmouseenter = function () {
             hs.style.color="red";
@@ -40,8 +32,6 @@ window.onload = function () {
             }
         // let tabList =document.querySelector(".tabList >li")
         let tabLists = document.querySelectorAll(".tabList > li")
-         // console.log(tabList);
-        // console.log(tabLists);
         tabLists.forEach(function (elem,index) {
             elem.onmouseenter = function () {
                 for (let i=0;i<tabLists.length;i++){
@@ -71,82 +61,162 @@ window.onload = function () {
 
     })
 //    轮播图
+    let current =0,next =0;
     let rightBnt =document.querySelector(".rightBnt")
     let leftBnt =document.querySelector(".LeftBnt")
     let darwLists = document.querySelectorAll(".darwList >li")
-
-   let  index =0;
-
-       rightBnt.onclick =function () {
-                index++;
-           // console.log(index);
-           // console.log("---");
-           if (index == darwLists.length){
-                    index=0;
-                }
-                for (let i=0;i<darwLists.length;i++){
-                    // darwLists[i].style.zIndex = 1;
-                    darwLists[i].style.opacity = 0;
-                    bannerPointer[i].style.backgroundColor ="#fff";
-
-                }
-                // darwLists[index].style.zIndex =998;
-                 darwLists[index].style.opacity =1;
-                bannerPointer[index].style.backgroundColor ="#046b80";
-
-            }
-      leftBnt.onclick =function () {
-
-        if (index == 0){
-            index=darwLists.length;
-        }
-        index--;
-        for (let i=0;i<darwLists.length;i++){
-            // darwLists[i].style.zIndex = 1;
-            darwLists[i].style.opacity = 0;
-            bannerPointer[i].style.backgroundColor ="#fff";
-
-        }
-        // darwLists[index].style.zIndex =998;
-        darwLists[index].style.opacity =1;
-        bannerPointer[index].style.backgroundColor ="#046b80";
-
-
-    }
-      //自动轮播
-    let darws = document.querySelector(".darw")
-    console.log(darws);
-    let  timer= setInterval(rightBnt.onclick,1000)
-    // console.log("timer"+timer);
-
+    let hot = document.getElementsByClassName(" .hot")
+    console.log(hot);
+    let darws = document.querySelector(".darw");
+    let w = darwLists[0].offsetWidth;
+    let flag =true;
+    let timer = null;
     darws.onmouseenter = function () {
           clearInterval(timer);
-
-
+          rightBnt.style.opacity=1;
+          leftBnt.style.opacity = 1;
 
       }
     darws.onmouseleave =function () {
          timer=setInterval(rightBnt.onclick,1000);
+         rightBnt.style.opacity=0;
+        leftBnt.style.opacity = 0;
 
     }
+    // rightBnt.onmouseenter = function () {
+    //     rightBnt.style.opacity=1;
+    //
+    // }
+    // rightBnt.onmouseleave = function () {
+    //     rightBnt.style.opacity=0;
+    //
+    // }
+    // leftBnt.onmouseenter = function () {
+    //     leftBnt.style.opacity = 1;
+    //
+    // }
+    // leftBnt.onmouseleave = function () {
+    //     leftBnt.style.opacity = 0;
+    //
+    // }
+     //rightBnt
+    rightBnt.onclick =function () {
+        if (!flag){
+            return
+        }
+        flag = false;
+        next++;
+        if (next ==darwLists.length){
+            next=0;
+        }
+        darwLists[next].style.left = w+`px`;
+        bannerPointer[current].classList.remove("hot");
+        bannerPointer[next].classList.add("hot");
+        animate(darwLists[current],{left:-w})
+        animate(darwLists[next],{left:0},function () {
+            flag = true;
+
+        });
+        current =next;
+
+    }
+    //leftBnt
+    leftBnt.onclick =function () {
+        if (!flag){
+            return
+        }
+        flag = false;
+        next--;
+        if (next <0){
+            next=darwLists.length-1;
+        }
+        darwLists[next].style.left = -w+`px`;
+        bannerPointer[current].classList.remove("hot");
+        bannerPointer[next].classList.add("hot");
+        animate(darwLists[current],{left:w})
+        animate(darwLists[next],{left:0},function () {
+            flag = true;
+
+        });
+        current =next;
+
+    }
+    function auto() {
+
+        timer= setInterval(rightBnt.onclick,1000)
+
+    }
+    auto()
+
 
 //    点击切换
-
-
-
-    for(let i=0;i<bannerPointer.length;i++){
-
+    for (let i=0;i<bannerPointer.length;i++){
         bannerPointer[i].onclick =function () {
-            index =i;
-            for (let j =0;j<bannerPointer.length;j++){
+            if (current === i){
+                return
+            }
+            next = i;
+            if (next>current){
+            darwLists[next].style.left = w+`px`;
+            animate(darwLists[current],{left:-w});
+            animate(darwLists[next],{left:0});
+            }else {
+                darwLists[next].style.left = w+`px`;
+                animate(darwLists[current],{left:-w});
+                animate(darwLists[next],{left:0});
 
-               bannerPointer[j].style.backgroundColor="#fff";
-               darwLists[j].style.zIndex=1;
-           }
-           this.style.backgroundColor="#046b80"
-           darwLists[i].style.zIndex=999;
-       }
+            }
 
+
+            bannerPointer[current].classList.remove("hot");
+            bannerPointer[next].classList.add("hot");
+
+            current=next;
+        }
     }
 
+
+//     for(let i=0;i<bannerPointer.length;i++){
+//
+//         bannerPointer[i].onclick =function () {
+//             index =i;
+//             for (let j =0;j<bannerPointer.length;j++){
+//
+//                bannerPointer[j].style.backgroundColor="#fff";
+//                darwLists[j].style.zIndex=1;
+//            }
+//            this.style.backgroundColor="#046b80"
+//            darwLists[i].style.zIndex=999;
+//        }
+//
+//     }
+//
+
+//懒加载
+    let viewH = window.innerHeight;
+    let imgs = document.querySelectorAll(".lazyload");
+    let positionArr = []
+    imgs.forEach(function (ele) {
+        let parent = ele.offsetParent;
+         positionArr.push(parent.offsetTop+ele.offsetTop)
+
+    })
+    window.onscroll = function () {
+        let scrolltop =document.documentElement.scrollTop|| document.body.scrollTop;
+        for (let i =0;i<positionArr.length;i++){
+            if(scrolltop + viewH >= positionArr[i] + 100 ){
+                if (!imgs[i].src){
+                    imgs[i].src =imgs[i].getAttribute("aa")
+                }
+            }
+
+        }
+
+
+}
+//z左右箭头
+//     let rightbnt = document.querySelector(".rightBnt")
+//     let leftbnt = document.querySelector(".LeftBnt")
+//     console.log(rightbnt);
+//     console.log(leftbnt);
 }
