@@ -120,24 +120,37 @@ img{
     line-height: 1.5;
 }
 .main  img {
-    width: 480px;
+    width: 50px;
     height: 50px;
+    margin-right: 10px;
+
+}
+.main .thumb{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.thumb li {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+}
+.main .mess{
+    float: left;
+    display: block;
 }
 .main .word{
     width: 99%;
     height: 200px;
     border: 1px solid #333333;
+    display: block;
+    float: left;
 }
-.submit p{
-    width: 40px;
-    height: 30px;
-    padding: 0 20px;
-    line-height: 30px;
-    border-radius: 5px;
-    float: right;
-    background: #333333;
+.input[type="submit"]{
+    width: 30px;
+    height: 20px;
+    background-color: black;
     color: white;
-    margin-top: 10px;
 }
 .note2{
     width: 100%;

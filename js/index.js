@@ -72,11 +72,11 @@ window.onload = function () {
     let flag =true;
     let timer = null;
     darws.onmouseenter = function () {
-          clearInterval(timer);
-          rightBnt.style.opacity=1;
-          leftBnt.style.opacity = 1;
+        clearInterval(timer);
+        rightBnt.style.opacity=1;
+        leftBnt.style.opacity = 1;
 
-      }
+    }
     darws.onmouseleave =function () {
          timer=setInterval(rightBnt.onclick,1000);
          rightBnt.style.opacity=0;

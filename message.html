@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./css/message.css">
+
 </head>
 <body>
 <!--head-->
@@ -32,20 +33,26 @@
         留言
     </div>
     <h2>来说点儿什么吧...</h2>
-    <p> 您的姓名： <input name="name" id="name" type="text"></p>
+    <p> 您的姓名： <input name="user" id="user" type="text"></p>
     <p>选择头像：*
 
     </p>
-    <div>
-        <img src="./image/22.jpg" alt="">
-    </div>
-    <b>留言内容：
-    </b>
-    <div class="word">
-    </div>
-    <div class="submit">
-        <p>提交</p>
-    </div>
+    <ul class="thumb">
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx1.jpg " alt="" ></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx3.jpg" alt=""></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx4.jpg" alt=""></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx5.jpg" alt=""></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx6.jpg" alt=""></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx7.jpg" alt=""></li>
+        <li style="opacity:0.5 "><img src="http://jxhx2.yangqq.com/e/tool/images/tx8.jpg" alt=""></li>
+    </ul>
+
+    <span class="mess">留言内容： </span>
+    <span class="Time">0</span>
+
+    <textarea name="word" cols="60" rows="12" id="word" maxlength="20"; style="width: 99%;resize: none;"></textarea>
+    <input type="submit" name="sub" value="提交" style=" width: 50px;height: 25px;
+    background-color: black;color: white;padding: 5px;float: right">
     <div class="note">
         <ul>
             <li class="note1">
@@ -54,7 +61,7 @@
                     <img src="./image/23.png" alt="">
                     </div>
                     <div class="noteRight">
-                        <p class="user">dancesmile</p>
+                        <span class="user">dancesmile</span>
                         <p class="noteWord">你好</p>
                     </div>
                     <div class="time">2019-05-22</div>
@@ -69,26 +76,26 @@
                 </div>
             </li>
 
-            <li class="note1">
-                <div class="note2">
-                    <div class="noteDraw">
-                        <img src="./image/23.png" alt="">
-                    </div>
-                    <div class="noteRight">
-                        <p class="user">dancesmile</p>
-                        <p class="noteWord">你好</p>
-                    </div>
-                    <div class="time">2019-05-22</div>
-                </div>
+<!--            <li class="note1">-->
+<!--                <div class="note2">-->
+<!--                    <div class="noteDraw">-->
+<!--                        <img src="./image/23.png" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="noteRight">-->
+<!--                        <p class="user">dancesmile</p>-->
+<!--                        <p class="noteWord">你好</p>-->
+<!--                    </div>-->
+<!--                    <div class="time">2019-05-22</div>-->
+<!--                </div>-->
 
-                <div class="noteBottom">
-                    <div class="no">
-                        <p class="hot">站长回复:</p>
-                        <p>你好</p>
-                    </div>
+<!--                <div class="noteBottom">-->
+<!--                    <div class="no">-->
+<!--                        <p class="hot">站长回复:</p>-->
+<!--                        <p>你好</p>-->
+<!--                    </div>-->
 
-                </div>
-            </li>
+<!--                </div>-->
+<!--            </li>-->
 
         </ul>
 
@@ -107,6 +114,6 @@
            <p>所有文章未经授权禁止转载、摘编、复制或建立镜像，如有违反，追究法律责任。</p>
     </span>
 </div>
-
+<script src="js/message.js"></script>
 </body>
 </html>
